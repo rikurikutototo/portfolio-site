@@ -1,0 +1,1273 @@
+@charset "UTF-8";
+.fadeInUpTrigger {
+  opacity: 0;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  background: #fff;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+a :focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: top;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+::-moz-selection {
+  background-color: #EDEDED;
+  color: gray;
+}
+
+::selection {
+  background-color: #EDEDED;
+  color: gray;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+  content: "";
+  content: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.footer {
+  margin-bottom: 20px;
+}
+
+.footer .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 767px) {
+  .footer .inner {
+    display: block;
+  }
+}
+
+.footer__logo {
+  text-align: center;
+}
+
+.footer__logo a:hover {
+  opacity: 0.6;
+}
+
+.footer__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 40px;
+}
+
+@media (max-width: 767px) {
+  .footer__nav-list {
+    padding-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 10px;
+  }
+}
+
+.footer__nav-item {
+  padding-right: 24px;
+}
+
+@media (max-width: 767px) {
+  .footer__nav-item {
+    padding-right: 12px;
+  }
+}
+
+.footer__nav-item:last-child {
+  padding-right: 0;
+}
+
+.footer__nav-item a:hover {
+  opacity: 0.6;
+}
+
+.footer__copyright {
+  padding: 20px 0 5px 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  top: 40px;
+  right: 0px;
+  width: 100%;
+  z-index: 100;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  padding-right: 20px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .header__logo {
+    margin: 0 0 0 auto;
+  }
+}
+
+.header__logo a:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__nav-item {
+  padding-right: 24px;
+}
+
+.header__nav-item:last-child {
+  padding-right: 0;
+}
+
+.header__nav-item a:hover {
+  opacity: 0.6;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .inner {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
+
+.section {
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding-top: 35px;
+    padding-bottom: 60px;
+  }
+}
+
+.container {
+  padding: 30px;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  max-width: 100%;
+  border: 2px solid #000;
+  color: #000;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  line-height: 58px;
+  height: 60px;
+  margin: 0;
+  background-color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn:hover, .btn:focus {
+  outline: none;
+}
+
+.btn::-moz-foucus-inner {
+  padding: 0;
+  border: none;
+}
+
+.logo {
+  line-height: 1;
+}
+
+.logo__img {
+  display: block;
+}
+
+.section-title {
+  padding-bottom: 40px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 2.0rem;
+    padding-bottom: 30px;
+  }
+}
+
+/*スクロールダウン全体の場所*/
+.scrolltop {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  right: 50%;
+  bottom: 10px;
+  /*全体の高さ*/
+  height: 50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolltop span {
+  /*描画位置*/
+  position: absolute;
+  left: -10px;
+  top: 60px;
+  /*テキストの形状*/
+  color: #333;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolltop::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 0;
+  /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: #333;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+  -webkit-animation: pathmoveup 1.4s ease-in-out infinite;
+          animation: pathmoveup 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@-webkit-keyframes pathmoveup {
+  0% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+@keyframes pathmoveup {
+  0% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+/*スクロールダウン全体の場所*/
+.scrolldown {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  right: 50%;
+  bottom: 10px;
+  /*全体の高さ*/
+  height: 50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown span {
+  /*描画位置*/
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  /*テキストの形状*/
+  color: #333;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 0;
+  /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: #333;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+  -webkit-animation: pathmove 1.4s ease-in-out infinite;
+          animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@-webkit-keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #D5E0F2;
+  text-align: center;
+  color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.splash_text {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  width: 260px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.drawer-icon {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 40px;
+  z-index: 500;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@media (max-width: 767px) {
+  .drawer-icon {
+    display: block;
+  }
+}
+
+.drawer-icon--open .drawer-icon__bar1 {
+  -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+  top: 8px;
+}
+
+.drawer-icon--open .drawer-icon__bar2 {
+  display: none;
+}
+
+.drawer-icon--open .drawer-icon__bar3 {
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+  top: 8px;
+}
+
+.drawer-icon__bars {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.drawer-icon__bar1, .drawer-icon__bar2, .drawer-icon__bar3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #0059F2;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.drawer-icon__bar1 {
+  top: 0;
+}
+
+.drawer-icon__bar2 {
+  top: 12px;
+}
+
+.drawer-icon__bar3 {
+  top: 24px;
+}
+
+.drawer-content {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 200px;
+  height: 100%;
+  background-color: #D5E0F2;
+  -webkit-transform: translateX(500px);
+          transform: translateX(500px);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@media (max-width: 767px) {
+  .drawer-content {
+    display: block;
+  }
+}
+
+.drawer-content--open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.drawer-content__item a {
+  display: block;
+  padding: 20px;
+  font-weight: bold;
+  color: #0059F2;
+  background-color: #D5E0F2;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+}
+
+.hero__heading {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  z-index: 20;
+}
+
+.hero__role {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #0059F2;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.hero__role::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2px;
+  height: 14px;
+  background-color: #0059F2;
+}
+
+.hero__role::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2px;
+  height: 14px;
+  background-color: #0059F2;
+}
+
+.hero__human-name {
+  font-size: 3.6rem;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .hero__human-name {
+    font-size: 2.4rem;
+  }
+}
+
+.hero__site-name {
+  font-size: 4.8rem;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .hero__site-name {
+    font-size: 3.2rem;
+  }
+}
+
+.hero__background-image {
+  min-width: 350px;
+  min-height: 450px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  z-index: 0;
+  -webkit-animation: fadeIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+          animation: fadeIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+.service__contents ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .service__contents ul {
+    display: block;
+  }
+}
+
+.service__contents ul li {
+  width: 33%;
+  padding-right: 20px;
+}
+
+.service__contents ul li:last-child {
+  padding-right: 0;
+}
+
+@media (max-width: 767px) {
+  .service__contents ul li {
+    width: 100%;
+    padding-bottom: 70px;
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
+.service__contents ul li img {
+  height: 200px;
+}
+
+@media (max-width: 767px) {
+  .service__description {
+    text-align: left;
+  }
+}
+
+.service__name {
+  padding: 18px 0 14px 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .service__name {
+    padding: 14px 0 10px 0;
+    font-size: 1.6rem;
+  }
+}
+
+.message {
+  position: relative;
+}
+
+.message::before {
+  content: '';
+  position: absolute;
+  top: 55%;
+  left: 65%;
+  width: 90px;
+  height: 90px;
+  background-color: #D5E0F2;
+  border-radius: 60%;
+  z-index: -20;
+}
+
+@media (max-width: 767px) {
+  .message::before {
+    width: 60px;
+    height: 60px;
+    top: 75%;
+    left: 65%;
+  }
+}
+
+.message p {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.works {
+  padding-top: 150px;
+  background-color: #D5E0F2;
+}
+
+.skills {
+  position: relative;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  width: 90px;
+  height: 90px;
+  background-color: #D5E0F2;
+  border-radius: 60%;
+  z-index: -20;
+}
+
+@media (max-width: 767px) {
+  .skills::before {
+    width: 60px;
+    height: 60px;
+    top: 60%;
+    left: 20%;
+  }
+}
+
+.skills table {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.skills td,
+.skills th {
+  padding: 15px;
+  width: 30px;
+  height: 25px;
+  text-align: center;
+  font-size: 2.8rem;
+  color: dimgray;
+}
+
+@media (max-width: 767px) {
+  .skills td,
+  .skills th {
+    padding: 8px;
+    width: 10px;
+    height: 15px;
+    font-size: 1.6rem;
+  }
+}
+
+.contact {
+  position: relative;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.contact .inner {
+  max-width: 500px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: #D5E0F2;
+  border-radius: 70% 50% 50% 70%/50% 50% 70% 60%;
+}
+
+@media (max-width: 767px) {
+  .contact .inner {
+    max-width: 80%;
+  }
+}
+
+.contact p {
+  padding-bottom: 14px;
+}
+
+.contact p:last-child {
+  padding-bottom: 0;
+}
+
+.contact__mail-address {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .contact__mail-address {
+    font-size: 1.8rem;
+  }
+}
+
+.contact__background-image {
+  min-width: 340px;
+  min-height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: -20;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
+  margin: 0 auto;
+}
+
+.slider img {
+  width: 35vw;
+  /*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height: auto;
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  .slider img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider img {
+    width: 45vh;
+  }
+}
+
+.slider .slick-slide {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  /*左右の画像のサイズを80%に*/
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  /*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;
+  /*透過50%*/
+}
+
+.slider .slick-slide.slick-center {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  /*中央の画像のサイズだけ等倍に*/
+  opacity: 1;
+  /*透過なし*/
+}
+
+/*矢印の設定*/
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #0059F2;
+  /*矢印の色*/
+  border-right: 2px solid #0059F2;
+  /*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -8.5%;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -8.5%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 6px;
+  /*ドットボタンのサイズ*/
+  height: 10px;
+  /*ドットボタンのサイズ*/
+  display: block;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+  background: #0059F2;
+  /*ドットボタンの現在地表示の色*/
+}
+
+/* 背景が下から出現＋テキスト */
+.bgDU {
+  position: relative;
+  /*テキストの基点となる位置を定義*/
+}
+
+.bgDU span.mask {
+  position: relative;
+  /*背景色の基点となる位置を定義*/
+  display: block;
+  line-height: 0;
+  /*行の高さを0にする*/
+  overflow: hidden;
+  /*拡大してはみ出る要素を隠す*/
+}
+
+.bgDU span.mask::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  /*透過0*/
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  background: #333;
+  /*背景色*/
+  width: 100%;
+  height: 100%;
+}
+
+.bgDU:hover span.mask::before {
+  /*hoverした時の変化*/
+  opacity: 1;
+  /*透過なしに変化*/
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.bgDU span.cap {
+  /*画像の上のテキスト*/
+  position: absolute;
+  opacity: 0;
+  /*透過0*/
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  z-index: 3;
+  /*テキストを前面に出す*/
+  top: 20%;
+  left: 50%;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  font-size: 2.0rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  /*テキストの位置中央指定*/
+  color: #fff;
+  /*テキストの色を変えたい場合はここを修正*/
+  line-height: 1.5;
+  /*行の高さを1.5にする*/
+}
+
+@media (max-width: 767px) {
+  .bgDU span.cap {
+    font-size: 1.8rem;
+  }
+}
+
+.bgDU:hover span.cap {
+  /*hoverした時の変化*/
+  opacity: 1;
+  /*透過なしに変化*/
+}
+
+.bgDU span.cap-description {
+  /*画像の上のテキスト*/
+  position: absolute;
+  opacity: 0;
+  /*透過0*/
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  z-index: 3;
+  /*テキストを前面に出す*/
+  top: 40%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  /*テキストの位置中央指定*/
+  color: #fff;
+  /*テキストの色を変えたい場合はここを修正*/
+  line-height: 1.5;
+  /*行の高さを1.5にする*/
+}
+
+.bgDU:hover span.cap-description {
+  /*hoverした時の変化*/
+  opacity: 1;
+  /*透過なしに変化*/
+}
+
+.bgDU .cap-link {
+  /*画像の上のテキスト*/
+  position: absolute;
+  opacity: 0;
+  /*透過0*/
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  z-index: 3;
+  /*テキストを前面に出す*/
+  top: 70%;
+  left: 50%;
+  border: 1px solid #333;
+  font-weight: normal;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  /*テキストの位置中央指定*/
+  color: #fff;
+  /*テキストの色を変えたい場合はここを修正*/
+  line-height: 1.5;
+  /*行の高さを1.5にする*/
+  text-decoration: underline;
+}
+
+.bgDU:hover span.cap-link {
+  /*hoverした時の変化*/
+  opacity: 1;
+  /*透過なしに変化*/
+}
+
+@media (min-width: 960px) {
+  .hidden-pc {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  .hidden-tab {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-sp {
+    display: none;
+  }
+}
+
+.blue {
+  color: #0059F2;
+  font-size: 4.2rem;
+}
+
+@media (max-width: 767px) {
+  .blue {
+    font-size: 3.4rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
